@@ -6,13 +6,12 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./card.component.less']
 })
 export class CardComponent implements OnInit {
-  @Input() cardHeadline: string;
-  @Input() cardText: string;
-  @Input() cardType: number;
+  @Input() card: any;
 
   constructor() { }
 
   ngOnInit() {
+    console.log(this.card);
   }
 
 }

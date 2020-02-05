@@ -53,7 +53,7 @@ namespace KTInsta.Controllers
             public List<KTInstaCards> KTInstaCards { get; set; }
         }
         [HttpGet]
-        public KTInstaCardRS GetKTInstaCards()
+        public List<KTInstaCards> GetKTInstaCards()
         {
             //Temporary disabled to keep api running
             //IKTInstaCradsRepositories<KTInstaCards> _KTInstaCardsRepo =
@@ -83,7 +83,7 @@ namespace KTInsta.Controllers
                     CardText = dr["CardText"].ToString()
                 }).ToList();
             response.KTInstaCards = KTInstaCards;
-            return response;
+            return KTInstaCards;
         }
         public enum CardType
         {
