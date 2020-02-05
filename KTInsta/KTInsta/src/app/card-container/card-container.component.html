@@ -1,0 +1,7 @@
+<div class="masonry-demo">
+  <ngx-masonry [options]="masonryOptions" [useImagesLoaded]="true">
+    <ngxMasonryItem *ngFor="let card of masonryImages" class="masonry-item">
+      <app-card [cardHeadline]="card.cardHeadline"></app-card>
+    </ngxMasonryItem>
+  </ngx-masonry>
+</div>

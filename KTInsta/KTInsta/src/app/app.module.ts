@@ -4,16 +4,18 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { MdCardComponent } from './md-card/md-card.component';
 import { HomeComponent } from './home/home.component';
 
 import { NgxMasonryModule } from 'ngx-masonry';
+import { CardContainerComponent } from './card-container/card-container.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MdCardComponent,
-    HomeComponent
+    HomeComponent,
+    CardContainerComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
