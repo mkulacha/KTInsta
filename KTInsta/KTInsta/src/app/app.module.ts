@@ -3,16 +3,22 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MdCardComponent } from './md-card/md-card.component';
+import { HomeComponent } from './home/home.component';
+
+import { NgxMasonryModule } from 'ngx-masonry';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MdCardComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    NgxMasonryModule
   ],
   providers: [],
   bootstrap: [AppComponent]

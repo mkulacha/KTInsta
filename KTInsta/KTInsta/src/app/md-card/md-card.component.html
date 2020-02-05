@@ -1,0 +1,15 @@
+<div class="masonry-demo">
+  <ngx-masonry [options]="masonryOptions" [useImagesLoaded]="true">
+    <ngxMasonryItem *ngFor="let picture of masonryImages" class="masonry-item">
+      <div>
+        <div>
+          Hello World!
+        </div>
+        <img src="{{picture.picture}}">
+        <div>
+          This is a description
+        </div>
+      </div>
+    </ngxMasonryItem>
+  </ngx-masonry>
+</div>
