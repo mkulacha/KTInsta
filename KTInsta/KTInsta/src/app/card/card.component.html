@@ -4,14 +4,14 @@
     <h1 *ngIf="card.cardType == 2">Product Update</h1>
     <h1 *ngIf="card.cardType == 3">Mass Disruption</h1>
     <h1 *ngIf="card.cardType == 4">Leaderboard</h1>
-    <h1 *ngIf="card.cardType == 5">Notification</h1>
+    <h1 *ngIf="card.cardType == 5">{{card.cardText}}</h1>
   </div>
   <div *ngIf="card.cardType == 1 || card.cardType == 5" class="card__date">
     02/27/2020
   </div>
   <img *ngIf="card.cardType != 4" src="{{card.cardHeadLine}}" class="card__headline-img">
   <div *ngIf="card.cardType == 4" ><img class="crown-img" src="https://dejpknyizje2n.cloudfront.net/marketplace/products/cartoon-crown-symbol-sticker-1539881353.9213958.png"><img src="{{card.cardHeadLine}}" class="card__headline-img">&nbsp;<span class="card__description">{{card.cardText}}</span></div>
-  <div *ngIf="card.cardType != 4" class="card__description">
+  <div *ngIf="card.cardType != 4 && card.cardType != 5" class="card__description">
     {{card.cardText}}
   </div>
 </div>
