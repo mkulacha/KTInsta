@@ -18,21 +18,23 @@ export class CardContainerComponent implements OnInit {
 
   public cards = [];
   allCards = [];
-  initialCount = 15;
+  initialCount = 20;
   limit = 5;
+  currentIndex = 0;
 
   constructor(http: HttpClient) {
     http.get<Card[]>("http://localhost:5000/" + 'api/KTInstaController').subscribe(result => {
       this.allCards = [];
       Object.keys(result).map((key) => { this.allCards.push(result[key]) });
-      this.cards = this.allCards.slice(0, this.initialCount);
+      this.cards = this.allCards;
     }, error => console.error(error));
   }
 
   async showMoreImages() {
-    await this.sleep(10000);
-    this.limit += 15;
-    this.cards = this.allCards.slice(0, this.limit);
+    while (true) {
+      await this.sleep(10000);
+      this.cards = this.cards.concat(this.allCards);
+    }
   }
 
   sleep(ms) {

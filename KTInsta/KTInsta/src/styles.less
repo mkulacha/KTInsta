@@ -1,7 +1,14 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   overflow: hidden;
-  background-color: black;
+  background-color: #303030;
+}
+
+h1 {
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 10px;
 }
 
 .masonry-demo {
@@ -49,13 +56,66 @@ button {
 
 .masonry-item {
   margin-bottom: 20px;
-  background-color: #f1f1f1;
   background-size: cover;
   width: 340px;
 }
 
-.masonry-item img {
-  width: 100%;
-  height: 100%;
-  min-height: 340px;
+.card {
+  color: white;
+  border-radius: 4px;
+  box-shadow: 5px 6px 0px 1px rgba(0, 0, 0, 0.2), 2px 4px 0px -1px rgba(0, 0, 0, 0.14), 2px 4px 0px -1px rgba(0, 0, 0, 0.12);
+}
+
+.card-type--1 {
+  background-color: #424242;
+
+  .card__headline-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .card__date {
+    margin-bottom: 10px;
+  }
+}
+
+.card-type--2 {
+  background-color: #424242;
+
+  .card__headline-img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.card-type--4 {
+  color: black;
+  background-color: white;
+  .crown-img {
+    margin-bottom: 10px;
+  }
+  .card__description {
+    position: relative;
+    bottom: 44px;
+    font-weight: 500;
+  }
+}
+
+.card-type--3 {
+  background-color: rgba(255, 0, 0, 0.4);
+
+  .card__headline {
+    font-size: 18px;
+    font-style: italic;
+  }
+
+  .card__headline-img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.card__description {
+  padding: 5px;
+  font-size: 16px;
 }
