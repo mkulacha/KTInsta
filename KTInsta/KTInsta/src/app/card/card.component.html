@@ -4,8 +4,9 @@
     <h1 *ngIf="card.cardType == 2">Product Update</h1>
     <h1 *ngIf="card.cardType == 3">Mass Disruption</h1>
     <h1 *ngIf="card.cardType == 4">Leaderboard</h1>
+    <h1 *ngIf="card.cardType == 5">Notification</h1>
   </div>
-  <div *ngIf="card.cardType == 1" class="card__date">
+  <div *ngIf="card.cardType == 1 || card.cardType == 5" class="card__date">
     02/27/2020
   </div>
   <img *ngIf="card.cardType != 4" src="{{card.cardHeadLine}}" class="card__headline-img">

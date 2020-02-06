@@ -18,7 +18,7 @@ export class CardContainerComponent implements OnInit {
 
   public cards = [];
   allCards = [];
-  initialCount = 20;
+  initialCount = 1;
   limit = 5;
   currentIndex = 0;
 

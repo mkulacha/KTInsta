@@ -90,7 +90,8 @@ namespace KTInsta.Controllers
             FAMCard = 1,
             ProductUpdateCard = 2,
             MassDistruption = 3,
-            TopLeader = 4
+            TopLeader = 4,
+            Notification = 5
         }
     }
 }
